@@ -6,7 +6,7 @@
   <p align="center">  
 <!--     <a href="https://arxiv.org/abs/2205.00363">arxiv</a> -->
     ·
-    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/master/Dataset">dataset</a>
+    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Dataset">dataset</a>
     ·
 <!--     <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a> -->
     
@@ -34,7 +34,7 @@ The following figures list some classic examples in our dataset.<br>
 #### 2.2 Splits
 The following table lists the detailed information statistics of the splited dataset.<br>
 ![](Dataset/splits.png)
-Check out [`data/`](https://github.com/ziyan-xiaoyu/SpatialMQA/Dataset) for more details.
+Check out [`data/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset) for more details.
 
 
 #### 2.3 Compare with other datasets
@@ -62,4 +62,4 @@ We conduct extensive experiments on SpatialMQA and report the performance of bot
 
 
 ### License
-This project is licensed under the [Apache-2.0 License](https://github.com/ziyan-xiaoyu/SpatialMQA/master/LICENSE).
+This project is licensed under the [Apache-2.0 License](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE).
