@@ -58,8 +58,8 @@ We first objectively investigated the existing multimodal datasets that include 
 ![](figures/performance_by_relation_random_split_v4.png)
 1/数据集调研表
 2/数据集对比图
-
-
+https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Comparison/compare.jpg
+![](Comparison/compare.jpg)
 
 
 ### 3 Experiment results
