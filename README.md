@@ -50,7 +50,6 @@ We first objectively investigated the existing multimodal datasets that include 
 ### 3 Experiment results
 We conduct extensive experiments on SpatialMQA and report the performance of both open- and closed-source MLLMs. The accuracy of the state-of-the-art (SoTA) methods, including GPT-4v and the fine-tuned LLaVA, on our dataset is only 39.80% and 46.85%, respectively, which is significantly below the human accuracy level of 97.86%. We further provide detailed analyses and point out promising directions for future research
 #### 3.1 The experiment results of the MLLMs we choose
-<br>
 ![](Results/main.png)
 <br>
 ![](Results/analysis.png)
