@@ -40,14 +40,8 @@ _The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (
 The following table lists the detailed information statistics of the splited dataset.
 1/放数据集划分后的数据概览
 
-split   |  train | dev | test | total
-:------|:--------:|:--------:|:--------:|:--------:
-random | 7,680 | 1,097 | 2,195 | 10,972
-zero-shot | 4,713 | 231 | 616 | 5,560
 
-Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
-
-Note that the image files still need to be downloaded separately as suggested in [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data).
+Check out [`data/`](https://github.com/ziyan-xiaoyu/SpatialMQA/Dataset) for more details.
 
 
 
@@ -75,15 +69,7 @@ We first objectively investigated the existing multimodal datasets that include 
 
 
 ### Citation
-If you find SpatialMQA useful:
-```bibtex
-@article{Liu2022VisualSR,
-  title={Visual Spatial Reasoning},
-  author={Fangyu Liu and Guy Edward Toh Emerson and Nigel Collier},
-  journal={Transactions of the Association for Computational Linguistics},
-  year={2023},
-}
-```
+
 
 ### License
 This project is licensed under the [Apache-2.0 License](https://github.com/ziyan-xiaoyu/SpatialMQA/master/LICENSE).
