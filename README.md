@@ -19,6 +19,7 @@
 abstruct. 
 
 ### 2 Spatial dataset: Splits, statistics, and meta-data
+SpatialMQA is based on manual annotation of images in the COCO dataset. Without relying on bbox, it divides the spatial relationship categories into six categories according to the concept of spatial coordinate system. The divisions are regular and have no intersections. At the same time, we ensure the richness of subject and object categories, eliminate language bias, and examine the ability of MLLMs to substitute different perspectives, while maintaining a relatively balanced amount of data. In addition, based on the centralized training of the team, we use script tools for manual annotation, which greatly improves the quality of the dataset and the consistency of standards.
 Below are a few examples.
 
 _The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
