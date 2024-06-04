@@ -1,14 +1,14 @@
 <br />
 <p align="center">
-  <h1 align="center">🔭 SpatialMQA: CAN MMLMs REASON SPATIAL RELATIONSHIPS</h1>
+  <h1 align="center">SpatialMQA: CAN MMLMs REASON SPATIAL RELATIONSHIPS</h1>
   <h3 align="center">A new benchmark for spatial reasoning of multi-model large language models.</h3>
   
   <p align="center">  
-    <a href="https://arxiv.org/abs/2205.00363">arxiv</a>
+<!--     <a href="https://arxiv.org/abs/2205.00363">arxiv</a> -->
     ·
-    <a href="https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data">dataset</a>
+    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/master/dataset">dataset</a>
     ·
-    <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a>
+<!--     <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a> -->
     
   </p>
 </p>
@@ -16,7 +16,10 @@
 
 ### 1 Overview
 
-The Visual Spatial Reasoning (VSR) corpus is a collection of caption-image pairs with true/false labels. Each caption describes the spatial relation of two individual objects in the image, and a vision-language model (VLM) needs to judge whether the caption is correctly describing the image (True) or not (False). Below are a few examples.
+abstruct. 
+
+### 2 Spatial dataset: Splits, statistics, and meta-data
+Below are a few examples.
 
 _The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
