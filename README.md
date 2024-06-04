@@ -29,14 +29,15 @@ SpatialMQA is a manually annotated dataset designed for multimodal spatial relat
 The following table lists some classic examples in our dataset.
 
 
-![](http://images.cocodataset.org/test2017/000000100633.jpg)  |  ![](http://images.cocodataset.org/train2017/000000080336.jpg) |   ![](http://images.cocodataset.org/train2017/000000261511.jpg) | ![](http://images.cocodataset.org/train2017/000000057550.jpg) 
+![](Examples/000000000933.jpg)  |  ![](Examples/000000006568.jpg) |   ![](Examples/000000057139.jpg) | ![](Examples/000000100633.jpg) 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-_Q: If you are the cyclist in the picture, where is the dog located relative to you? O: in front of, behind, left of, right of. A: behind_.   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
+_Q: Where is the fork located relative to the pizza?_ _O: on/above, below, in front of, behind, left of, right of_ _A: right of_  |  _Q: Where is the cat located relative to the car in the picture?_ _O: on/above, below, in front of, behind, left of, right of_ _A: on/above_ | _Q: For the white letters on the red warning sign, where is the letter P located relative to the letter Y?_ _O: on/above, below, left of, right of_ _A: on/above_ | _Q: If you are the cyclist in the picture, where is the dog located relative to you?_ _O: in front of, behind, left of, right of_ _A: behind_
 
 
-_The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+
 ![](http://images.cocodataset.org/train2017/000000119360.jpg)  |  ![](http://images.cocodataset.org/train2017/000000080336.jpg) |   ![](http://images.cocodataset.org/train2017/000000261511.jpg) | ![](http://images.cocodataset.org/train2017/000000057550.jpg) 
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+_{"image": "000000121362.jpg", "question": "If you are the player in the picture, where is the audience located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"}   |  _{"image": "000000142379.jpg", "question": "If you are the giraffe in the picture, where is the tree located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"} | _{"image": "000000015740.jpg", "question": "If you are the woman in the picture, from your perspective, where is the mouse located relative to the keyboard?", "options": ["on/above", "below", "in front of", "behind", "left of", "right of"], "answer": "left of"} | _{"image": "000000005255.jpg", "question": "If you are the pilot of the plane in the middle of the picture, from your perspective, where are the two boys sitting on the ground located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"}
 
 #### 2.2 Splits
 The following table lists the detailed information statistics of the splited dataset.
