@@ -27,21 +27,14 @@ SpatialMQA is a manually annotated dataset designed for multimodal spatial relat
 
 #### 2.1 Examples
 The following table lists some classic examples in our dataset.
+![](Examples/examples_1-4.png)
+![](Examples/examples_4-8.png)
 
-| ![img1](Examples/000000000933.jpg) | ![img2](Examples/000000006568.jpg) | ![img3](Examples/000000057139.jpg) | ![img4](Examples/000000100633.jpg) |
-|:---:|:---:|:---:|:---:|
-| Q: Where is the fork located relative to the pizza?<br>O: on/above, below, in front of, behind, left of, right of<br>A: right of | Q: Where is the cat located relative to the car in the picture?<br>O: on/above, below, in front of, behind, left of, right of<br>A: on/above | Q: For the white letters on the red warning sign, where is the letter P located relative to the letter Y?<br>O: on/above, below, left of, right of<br>A: on/above | Q: If you are the cyclist in the picture, where is the dog located relative to you?<br>O: in front of, behind, left of, right of<br>A: behind |
-
-
-![](http://images.cocodataset.org/train2017/000000119360.jpg)  |  ![](http://images.cocodataset.org/train2017/000000080336.jpg) |   ![](http://images.cocodataset.org/train2017/000000261511.jpg) | ![](http://images.cocodataset.org/train2017/000000057550.jpg) 
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-_{"image": "000000121362.jpg", "question": "If you are the player in the picture, where is the audience located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"}   |  _{"image": "000000142379.jpg", "question": "If you are the giraffe in the picture, where is the tree located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"} | _{"image": "000000015740.jpg", "question": "If you are the woman in the picture, from your perspective, where is the mouse located relative to the keyboard?", "options": ["on/above", "below", "in front of", "behind", "left of", "right of"], "answer": "left of"} | _{"image": "000000005255.jpg", "question": "If you are the pilot of the plane in the middle of the picture, from your perspective, where are the two boys sitting on the ground located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"}
 
 #### 2.2 Splits
 The following table lists the detailed information statistics of the splited dataset.
 1/放数据集划分后的数据概览
-
-
+![](Dataset/splits.png)
 Check out [`data/`](https://github.com/ziyan-xiaoyu/SpatialMQA/Dataset) for more details.
 
 
