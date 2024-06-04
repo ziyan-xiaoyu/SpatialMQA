@@ -1,4 +1,4 @@
-# Data 
+# Data of SpatialMQA
 
 ### Download images
 We use a subset of COCO-2017's images. The following script download COCO-2017's test sets images then put them into a single fodler `COCO2017/`.
