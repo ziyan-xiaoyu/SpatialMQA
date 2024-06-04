@@ -46,7 +46,7 @@ random | 7,680 | 1,097 | 2,195 | 10,972
 zero-shot | 4,713 | 231 | 616 | 5,560
 
 Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
-```
+
 Note that the image files still need to be downloaded separately as suggested in [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data).
 
 
