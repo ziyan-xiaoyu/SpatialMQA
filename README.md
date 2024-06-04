@@ -31,7 +31,7 @@ The following table lists some classic examples in our dataset.
 
 ![](Examples/000000000933.jpg)  |  ![](Examples/000000006568.jpg) |   ![](Examples/000000057139.jpg) | ![](Examples/000000100633.jpg) 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-_Q: Where is the fork located relative to the pizza?_  _<br>O: on/above, below, in front of, behind, left of, right of_  _<br>A: right of_  |  _Q: Where is the cat located relative to the car in the picture?_ <br>_O: on/above, below, in front of, behind, left of, right of_ _A: on/above_ | _Q: For the white letters on the red warning sign, where is the letter P located relative to the letter Y?_ _O: on/above, below, left of, right of_ _A: on/above_ | _Q: If you are the cyclist in the picture, where is the dog located relative to you?_ _O: in front of, behind, left of, right of_ _A: behind_
+Q: Where is the fork located relative to the pizza?<br>O: on/above, below, in front of, behind, left of, right of<br>A: right of  |  Q: Where is the cat located relative to the car in the picture?<br>O: on/above, below, in front of, behind, left of, right of<br>A: on/above | Q: For the white letters on the red warning sign, where is the letter P located relative to the letter Y?<br>O: on/above, below, left of, right of<br>A: on/above | Q: If you are the cyclist in the picture, where is the dog located relative to you?<br>O: in front of, behind, left of, right of_<br>A: behind
 
 
 
