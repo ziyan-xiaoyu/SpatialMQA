@@ -55,10 +55,10 @@ Note that the image files still need to be downloaded separately as suggested in
 We first objectively investigated the existing multimodal datasets that include spatial relationship recognition tasks. The results are shown in the figure below. Then, we proposed SpatialMQA to address the shortcomings of the existing baselines, which includes the following features:
 《列举贡献点123》
 **_More data != better performance._** The relations are sorte
-![](figures/performance_by_relation_random_split_v4.png)
+
 1/数据集调研表
+
 2/数据集对比图
-https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Comparison/compare.jpg
 ![](Comparison/compare.jpg)
 
 
@@ -71,7 +71,7 @@ https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Comparison/compare.jpg
 #### 3.2 Error case for GPT-4V and Gemini
 
 1/案例对比的图
-
+![](Results/error_case.jpg)
 
 
 ### Citation
