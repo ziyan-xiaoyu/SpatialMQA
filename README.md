@@ -28,23 +28,9 @@ SpatialMQA is a manually annotated dataset designed for multimodal spatial relat
 #### 2.1 Examples
 The following table lists some classic examples in our dataset.
 
-<div style="width:200px">![](Examples/000000000933.jpg)</div>|<div style="width:200px">![](Examples/000000006568.jpg)</div>|<div style="width:200px">![](Examples/000000057139.jpg)</div>|<div style="width:200px">![](Examples/000000100633.jpg)</div>
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-:200:|:200:|:200:|:200:
-Q: Where is the fork located relative to the pizza?<br>O: on/above, below, in front of, behind, left of, right of<br>A: right of  |  Q: Where is the cat located relative to the car in the picture?<br>O: on/above, below, in front of, behind, left of, right of<br>A: on/above | Q: For the white letters on the red warning sign, where is the letter P located relative to the letter Y?<br>O: on/above, below, left of, right of<br>A: on/above | Q: If you are the cyclist in the picture, where is the dog located relative to you?<br>O: in front of, behind, left of, right of_<br>A: behind
-
-<style>
-  table {
-    width: 100%;
-    table-layout: fixed;
-  }
-  th, td {
-    width: 100px; /* 设置所有单元格宽度为300px */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-</style>
+| ![img1](Examples/000000000933.jpg) | ![img2](Examples/000000006568.jpg) | ![img3](Examples/000000057139.jpg) | ![img4]((Examples/000000100633.jpg) |
+|:---:|:---:|:---:|:---:|
+| Q: Where is the fork located relative to the pizza?<br>O: on/above, below, in front of, behind, left of, right of<br>A: right of | Q: Where is the cat located relative to the car in the picture?<br>O: on/above, below, in front of, behind, left of, right of<br>A: on/above | Q: For the white letters on the red warning sign, where is the letter P located relative to the letter Y?<br>O: on/above, below, left of, right of<br>A: on/above | Q: If you are the cyclist in the picture, where is the dog located relative to you?<br>O: in front of, behind, left of, right of<br>A: behind |
 
 
 ![](http://images.cocodataset.org/train2017/000000119360.jpg)  |  ![](http://images.cocodataset.org/train2017/000000080336.jpg) |   ![](http://images.cocodataset.org/train2017/000000261511.jpg) | ![](http://images.cocodataset.org/train2017/000000057550.jpg) 
