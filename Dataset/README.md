@@ -20,7 +20,7 @@ Alternatively, you could also browse individual images online directly through C
 
 ### Splits
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.<br>
-All the splited data sets are in the directory [[dataset]](Dataset/dataset).
+All the splited data sets are in the directory [[dataset]](dataset).
 ![](Comparision/splits.jpg) 
 
 ### Format of the data
