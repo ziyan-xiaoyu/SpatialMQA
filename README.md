@@ -17,9 +17,9 @@
 ### 1 Overview
 
 Spatial relation reasoning is a crucial task for multimodal large language models(MLLMs) to understand the objective world. Despite significant attention, existing datasets for spatial relation reasoning have several shortcomings: 
-    <br>· Reliance on bounding box labeling
-    <br>· Lack of real-world modeling standards
-    <br>· Questions that can be answered solely by model prior knowledge
+<br>• Reliance on bounding box labeling
+<br>• Lack of real-world modeling standards
+<br>• Questions that can be answered solely by model prior knowledge
 All above hinder research in this area for MLLMs. In this paper, we propose SpatialMQA, a high-quality, human-annotated spatial relation reasoning dataset collected from COCO2017, which enables MLLMs to focus more on understanding images in real-world situations. To ensure the quality of the dataset, we design a well-tailored annotation procedure. Based on SpatialMQA, a series of closed- and open-source MLLMs are implemented and the results indicate that the current state-of-the-art MLLM achieves an accuracy of only 47% on SpatialMQA, which is significantly lower than human-level accuracy of 97.86%. Extensive experimental analyses are also conducted, suggesting the future research directions for this task.
 
 ### 2 SpatialMQA dataset
