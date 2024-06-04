@@ -16,20 +16,22 @@
 
 ### 1 Overview
 
-Spatial relation reasoning is a crucial task for multimodal large language models(MLLMs) to understand the objective world. Despite significant attention, existing datasets for spatial relation reasoning have several shortcomings: reliance on bounding box labeling, lack of real-world modeling standards, and questions that can be answered solely by model prior knowledge, all of which hinder research in this area for MLLMs. In this paper, we propose SpatialMQA, a high-quality, human-annotated spatial relation reasoning dataset collected from COCO2017, which enables MLLMs to focus more on understanding images in real-world situations. To ensure the quality of the dataset, we design a well-tailored annotation procedure. Based on SpatialMQA, a series of closed- and open-source MLLMs are implemented and the results indicate that the current state-of-the-art MLLM achieves an accuracy of only 47% on SpatialMQA, which is significantly lower than human-level accuracy of 97.86%. Extensive experimental analyses are also conducted, suggesting the future research directions for this task.
+Spatial relation reasoning is a crucial task for multimodal large language models(MLLMs) to understand the objective world. Despite significant attention, existing datasets for spatial relation reasoning have several shortcomings: 
+    · Reliance on bounding box labeling
+    · Lack of real-world modeling standards
+    · Questions that can be answered solely by model prior knowledge
+All above hinder research in this area for MLLMs. In this paper, we propose SpatialMQA, a high-quality, human-annotated spatial relation reasoning dataset collected from COCO2017, which enables MLLMs to focus more on understanding images in real-world situations. To ensure the quality of the dataset, we design a well-tailored annotation procedure. Based on SpatialMQA, a series of closed- and open-source MLLMs are implemented and the results indicate that the current state-of-the-art MLLM achieves an accuracy of only 47% on SpatialMQA, which is significantly lower than human-level accuracy of 97.86%. Extensive experimental analyses are also conducted, suggesting the future research directions for this task.
 
 ### 2 SpatialMQA dataset
-SpatialMQA is based on manual annotation of images in the COCO dataset. Without relying on bbox, it divides the spatial relationship categories into six categories according to the concept of spatial coordinate system. The divisions are regular and have no intersections. 
-At the same time, we ensure the richness of subject and object categories, eliminate language bias, and examine the ability of MLLMs to substitute different perspectives, while maintaining a relatively balanced amount of data. 
-In addition, based on the centralized training of the team, we use script tools for manual annotation, which greatly improves the quality of the dataset and the consistency of standards.
+SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format. The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
 
 #### 2.1 Examples
 The following table lists some classic examples in our dataset.
 
 
-![](http://images.cocodataset.org/train2017/000000119360.jpg)  |  ![](http://images.cocodataset.org/train2017/000000080336.jpg) |   ![](http://images.cocodataset.org/train2017/000000261511.jpg) | ![](http://images.cocodataset.org/train2017/000000057550.jpg) 
+![](http://images.cocodataset.org/test2017/000000100633.jpg)  |  ![](http://images.cocodataset.org/train2017/000000080336.jpg) |   ![](http://images.cocodataset.org/train2017/000000261511.jpg) | ![](http://images.cocodataset.org/train2017/000000057550.jpg) 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-_The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
+_Q: If you are the cyclist in the picture, where is the dog located relative to you? O: in front of, behind, left of, right of. A: behind_.   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
 
 
 _The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
