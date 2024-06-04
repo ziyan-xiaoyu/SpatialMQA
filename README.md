@@ -55,7 +55,6 @@ We conduct extensive experiments on SpatialMQA and report the performance of bot
 ![](Results/analysis.png)
 
 #### 3.2 Error case for GPT-4V and Gemini
-<br>
 ![](Results/error_case.jpg)
 
 
