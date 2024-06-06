@@ -14,52 +14,61 @@
 </p>
 
 
-### 1 Overview
+## 1 Overview
+**SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format.**
+<br>The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
 
-Spatial relation reasoning is a crucial task for multimodal large language models(MLLMs) to understand the objective world. Despite significant attention, existing datasets for spatial relation reasoning have several shortcomings: 
-<br>• **Reliance on bounding box labeling**
-<br>• **Lack of real-world modeling standards**
-<br>• **Questions that can be answered solely by model prior knowledge**
-<br>All above hinder research in this area for MLLMs. In this paper, we propose **_SpatialMQA_**, a high-quality, human-annotated spatial relation reasoning dataset collected from COCO2017, which enables MLLMs to focus more on understanding images in real-world situations. To ensure the quality of the dataset, we design a well-tailored annotation procedure. Based on SpatialMQA, a series of closed- and open-source MLLMs are implemented and the results indicate that the current state-of-the-art MLLM achieves an accuracy of only 46.85% on SpatialMQA, which is significantly lower than human-level accuracy of 97.86%. Extensive experimental analyses are also conducted, suggesting the future research directions for this task.
-
-### 2 SpatialMQA dataset
-**SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format.** The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
-
-#### 2.1 Examples
-The following figures list some classic examples in our dataset.<br>
+#### 1.1 Examples
+The following figures list some classic examples in our dataset.
+<br>
 ![](Examples/examples_1-4.png)
 ![](Examples/examples_4-8.png)
 
 
-#### 2.2 Splits
-The following table lists the detailed information statistics of the splited dataset.<br>
-![](Dataset/splits.png)
-Check out [`data/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset) for more details.
-
-
-#### 2.3 Compare with other datasets
-We first objectively investigated the existing multimodal datasets that include spatial relationship recognition tasks. The results are shown in the figure below. Then, we proposed SpatialMQA to make up for the shortcomings of the existing datasets, which includes the following features:
-<br>• We propose a new manually annotated high-quality dataset for multimodal spatial relation reasoning (SpatialMQA). This dataset includes questions that cannot be answered using only prior knowledge from MLLMs without the aid of images, and without bounding box.
-<br>• SpatialMQA’s primary feature is its use of the objective world as a reference system for annotation, involving questions that encompass both the first perspective and the third perspective. 
+#### 1.2 Detail information
+The following table lists the detailed information statistics of the splited dataset.
 <br>
 ![](Comparison/splits.png)
-<br>
-![](Comparison/compare.jpg)
+Check out [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset) for more details.
 
 
-### 3 Experiment results
-We conduct extensive experiments on SpatialMQA and report the performance of both open- and closed-source MLLMs. The accuracy of the state-of-the-art (SoTA) methods, including GPT-4v and the fine-tuned LLaVA, on our dataset is only 39.80% and 46.85%, respectively, which is significantly below the human accuracy level of 97.86%. We further provide detailed analyses and point out promising directions for future research
-#### 3.1 The experiment results of the MLLMs we choose
-![](Results/main.png)
-<br>
-![](Results/analysis.png)
+## 2 Access SpatialMQA
+### 2.1 Download images
+We use a subset of COCO-2017's images. The following script download COCO-2017's test sets images then put them into a single fodler `Dataset/COCO2017/`.
 
-#### 3.2 Error case for GPT-4V and Gemini
-![](Results/error_case.jpg)
+```bash
+cd Dataset/ 
+wget http://images.cocodataset.org/zips/test2017.zip
+unzip test2017.zip
+mv test2017 COCO2017 && rm -r test2017
+```
+Copy only relevant images to `relevant_images/`.
+```bash
+mkdir relevant_images
+cd tool
+python select_revlevant_images.py
+```
+Alternatively, you could also browse individual images online directly using the key "image" in single json data.
+<br>(Through COCO's open source link, http://images.cocodataset.org/test2017/+image_name. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
+
+### 2.2 Splits of the data
+As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
+<br>All the splited data sets are in the directory [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset). 
+
+### 2.3 Format of the data
+Each `jsonl` file is of the following format:
+```json
+{"image": "000000000933.jpg", "question": "Where is the fork located relative to the pizza?", "options": ["on/above", "below", "in front of", "behind", "left of", "right of"], "answer": "right of"}
+{"image": "000000100633.jpg", "question": "If you are the cyclist in the image, where is the dog located relative to you?", "options": ["in front of", "behind", "left of", "right of"], "answer": "behind"}
+{"image": "000000070986.jpg", "question": "If you are the driver of the bus in the image, from your perspective, where is the red car located relative to the bus?", "options": ["in front of", "behind", "left of", "right of"], "answer": "left of"}
+{"..."}
+```
+Each line is an individual data point.
+`image` denotes name of the image in COCO. `question` is the question with manual annotation, `options` is reasonable combinations of six spatial relationships:(on/above, below, in front of, behind, left of, right of. `answer` is the annotation based on the objective world.
 
 
-### Citation
+## Citation
 
 
-### License
+## License
 This project is licensed under the [Apache-2.0 License](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE).
