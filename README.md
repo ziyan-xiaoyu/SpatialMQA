@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h1 align="center">![](Example/icon/coordinate-axis.svg)Can Multimodal Large Language Models Understand Spatial Relations</h1>
+  <h1 align="center">![](Example/icon/coordinate-axis.png)Can Multimodal Large Language Models Understand Spatial Relations</h1>
   <h3 align="center">SpatialMQA: A new dataset for spatial reasoning of MLLMs.</h3>
   
   <p align="center">  
