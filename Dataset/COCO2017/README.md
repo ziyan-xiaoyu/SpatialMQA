@@ -14,4 +14,4 @@ cd tool
 python select_revlevant_images.py
 ```
 Alternatively, you could also browse individual images online directly using the key "image" in single json data.
-<br>(Through COCO's open source link, http://images.cocodataset.org/test2017/ + 'image_name'. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
+<br>(Through COCO's open source link, 'http://images.cocodataset.org/test2017/' + 'image_name'. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
