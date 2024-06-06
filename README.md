@@ -49,7 +49,7 @@ cd tool
 python select_revlevant_images.py
 ```
 Alternatively, you could also browse individual images online directly using the key "image" in single json data.
-<br>(Through COCO's open source link, http://images.cocodataset.org/test2017/+image_name. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
+<br>(Through COCO's open source link, 'http://images.cocodataset.org/test2017/' + 'image_name'. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
 
 ### 2.2 Splits of the data
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
