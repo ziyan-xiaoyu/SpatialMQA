@@ -2,7 +2,7 @@
 We use a subset of COCO-2017's images. The following script download COCO-2017's test sets images then put them into a single fodler `Dataset/COCO2017/`.
 
 ```bash
-cd Dataset/ 
+cd Dataset/
 wget http://images.cocodataset.org/zips/test2017.zip
 unzip test2017.zip
 mv test2017 COCO2017 && rm -r test2017
