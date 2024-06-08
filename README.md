@@ -17,19 +17,19 @@
 ## Contents
 
 - [ImgFact](#Contents)
-  - [Overview](#1_Overview)
+  - [Overview](#1-Overview)
     - [Examples](#Examples)
     - [Detail information](#Detail-information)
-  - [Access SpatialMQA](#2_Access_SpatialMQA)
-    - [Download images](#2.1_Download_images)
-    - [Splits of the data](#2.2_Splits_of_the_data)
-    - [Format of the data](#2.3_Format_of_the_data)
-  - [License](#License)
+  - [Access SpatialMQA](#2-Access-SpatialMQA)
+    - [Download images](#Download-images)
+    - [Splits of the data](#Splits-of-the-data)
+    - [Format of the data](#Format-of-the-data)
+  - [License](#3-License)
 
 
 
 
-## 1_Overview
+## 1 Overview
 **SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format.**
 The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
 
@@ -43,8 +43,8 @@ The following table lists the detailed information statistics of the splited dat
 Check out [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset) for more details.
 
 
-## 2_Access_SpatialMQA
-### Download_images
+## 2 Access SpatialMQA
+### Download images
 We use a subset of COCO-2017's images. The following script download COCO-2017's test sets images then put them into a single fodler `Dataset/COCO2017/`.
 
 ```bash
@@ -62,7 +62,7 @@ python select_revlevant_images.py
 Alternatively, you could also browse individual images online directly using the key "image" in single json data.
 <br>(Through COCO's open source link, 'http://images.cocodataset.org/test2017/' + 'image_name'. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
 
-### Splits_of_the_data
+### Splits of the data
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
 <br>All the splited data sets are in the directory [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset). 
 
@@ -79,5 +79,5 @@ Each line is an individual data point.
 
 
 
-## License
+## 3 License
 This project is licensed under the [Apache-2.0 License](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE).
