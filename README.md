@@ -23,8 +23,8 @@
     - [Detail information](#Detail-Information)
   - [Access SpatialMQA](#2-Access-SpatialMQA)
     - [Download images](#Download-Images)
-    - [Splits of the data](#Data-Split)
-    - [Format of the data](#Data-Format)
+    - [Data Split](#Data-Split)
+    - [Data Format](#Data-Format)
   - [Experiment & Evaluation](#4-Experiment-&-Evaluation)
     - [Experiment](#Experiment)
     - [Evaluation](#Evaluation)
@@ -38,12 +38,12 @@
 The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
 
 ### Examples
-The following figures list some classic examples in our dataset. You can click out [`Examples:1~4/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Examples/examples_1-4.png) and [`Examples:5~8/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Examples/examples_5-8.png) to view the details.
+The following figures list some classic examples in our dataset. You can click out [`Examples:1~4/`](Examples/examples_1-4.png) and [`Examples:5~8/`](Examples/examples_5-8.png) to view the details.
 
 ### Detail Information
-The following table [`Splits/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Comparison/splits.png) lists the detailed information statistics of the splited dataset.
+The following table [`Splits/`](Comparison/splits.png) lists the detailed information statistics of the splited dataset.
 <br>
-Check out [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset) for more details.
+Check out [`dataset/`](Dataset) for more details.
 
 
 ## 2 Access SpatialMQA
@@ -67,7 +67,7 @@ Alternatively, you could also browse individual images online directly using the
 
 ###  Data Split
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
-<br>All the splited data sets are in the directory [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset). 
+<br>All the splited data sets are in the directory [`dataset/`](Dataset). 
 
 ### Data Format
 Each `jsonl` file is of the following format:
@@ -80,12 +80,12 @@ Each `jsonl` file is of the following format:
 Each line is an individual data point.
 `image` denotes name of the image in COCO. `question` is the question with manual annotation, `options` is reasonable combinations of six spatial relationships:(on/above, below, in front of, behind, left of, right of. `answer` is the annotation based on the objective world.
 <br>
-Our dataset is expanded based on the categories included in the COCO dataset. There are 113 subject types and one additional type for subjects with five or fewer samples in our dataset, and 84 object types and one additional type for objects with five or fewer samples. Due to the overlap between subject and object types, we have a total of 128 distinct subject and object types. You can see all of them in the file [`S & O types/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset/types/types.txt). 
+Our dataset is expanded based on the categories included in the COCO dataset. There are 113 subject types and one additional type for subjects with five or fewer samples in our dataset, and 84 object types and one additional type for objects with five or fewer samples. Due to the overlap between subject and object types, we have a total of 128 distinct subject and object types. You can see all of them in the file [`S & O types/`](Dataset/types/types.txt). 
 
 
 ## 3 Experiment & Evaluation
 ### Experiment
-We have disclosed the inference and fine-tuning code for the model [`experiment/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Code/experiment), as well as the code required for evaluation [`eval/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Code/eval).
+We have disclosed the inference and fine-tuning code for the model [`experiment/`](Code/experiment), as well as the code required for evaluation [`eval/`](Code/eval).
 <br>
 - For blip, blip2, instructblip and ideficts, you can directly execute Python files: 
 ```
@@ -124,4 +124,4 @@ python gen_visual_relations.py
 
 
 ## 4 License
-This project is licensed under the [Apache-2.0 License](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE).
+This project is licensed under the [Apache-2.0 License](LICENSE).
