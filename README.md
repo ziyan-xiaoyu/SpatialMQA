@@ -87,19 +87,23 @@ Our dataset is expanded based on the categories included in the COCO dataset. Th
 ### Experiment
 We have disclosed the inference and fine-tuning code for the model [`experiment/`](Code/experiment), as well as the code required for evaluation [`eval/`](Code/eval).
 <br>
-- For blip, blip2, instructblip and ideficts, you can directly execute Python files: 
+- For blip, blip2, instructblip and ideficts, you can directly execute Python files to perform inference on models before and after fine-tuning: 
 ```
-nohup python filter_tuples.py > log/.log 2>1& &
-python gen_sample_tuples.py
-python gen_candidate_relations.py
-python gen_visual_relations.py
+nohup python blip-vqa-base.py > log/.log 2>1& &
+nohup python blip-vqa-base_finetuned.py > log/.log 2>1& &
+nohup python blip2-opt-2.7b.py > log/.log 2>1& &
+nohup python blip2-lora.py > log/.log 2>1& &
+nohup python instructblip-flan-t5-xl.py > log/.log 2>1& &
+nohup python instructblip-lora.py > log/.log 2>1& &
+nohup python idefics_new.py > log/.log 2>1& &
+nohup python idefics_lora.py > log/.log 2>1& &
 ```
-- For llava and mplug-owl, you need to execute bash files:
+- For llava and mplug-owl, you need to execute bash files to perform inference on models before and after fine-tuning:
 ```
-python filter_tuples.py
-python gen_sample_tuples.py
-python gen_candidate_relations.py
-python gen_visual_relations.py
+nohup python spatial_test_llava.py > log/.log 2>1& &
+nohup python spatial_test_llava_lora.py > log/.log 2>1& &
+nohup python spatial_test_mplug.py > log/.log 2>1& &
+nohup python spatial_test_mplug_lora.py > log/.log 2>1& &
 ```
 Due to the large amount of open source model code, you need to download it yourself through channels or call it directly from platforms such as [huggingface](https://huggingface.co).
 <br>
