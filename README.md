@@ -8,6 +8,7 @@
     ·
     <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Dataset">dataset</a>
     ·
+    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE">license</a>
 <!--     <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a> -->
     
   </p>
