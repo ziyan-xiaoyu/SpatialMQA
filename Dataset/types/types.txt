@@ -1,0 +1,128 @@
+person
+letter
+natural scenery
+hand
+cat
+cup
+sports ball
+dog
+car
+lamp
+cell phone
+fork
+clock
+bottle
+shadow
+building
+window
+laptop
+baseball bat
+knife
+tv
+bicycle
+number
+backpack
+stop sign
+paper
+bus
+book
+door
+elephant
+frisbee
+banana
+trash can
+wine glass
+towel
+mouse
+box
+remote
+spoon
+horse
+sink
+motorcycle
+teddy bear
+vase
+fire hydrant
+jar
+tree and wood
+potted plant
+chair
+shelf
+suitcase
+bear
+bird
+flower and grass
+pot
+traffic light
+refrigerator
+bowl
+fence
+skateboard
+mural
+mirror
+socket
+toy
+cow
+basket
+frame
+cake
+surfboard
+pillow
+clothes
+bench
+scissors
+orange
+handbag
+bread
+plate
+giraffe
+sheep
+shower
+camera
+boat
+pen
+dining table
+toothbrush
+billboard
+sculpture
+signboard
+umbrella
+kettle
+microwave
+truck
+train
+keyboard
+apple
+glass
+cabinet
+drink
+tennis racket
+hair drier
+speaker
+carrot
+bathtub
+fan
+rack
+faucet
+airplane
+picture
+snowboard
+sanitizer
+switch
+glasses
+ketchup
+scale
+bed
+zebra
+couch
+seat
+pizza
+toilet
+wall
+fireplace
+display
+pole
+screen
+dessert
+others_sub
+others_obj
