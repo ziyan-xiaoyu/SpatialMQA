@@ -17,8 +17,8 @@
 ## Contents
 
 - [ImgFact](#Contents)
-  - [Overview](#1_Overview)
-    - [Examples](#1.1_Examples)
+  - [Overview](#Overview)
+    - [Examples](#Examples)
     - [Detail information](#1.2_Detail_information)
   - [Access SpatialMQA](#2_Access_SpatialMQA)
     - [Download images](#2.1_Download_images)
@@ -29,11 +29,11 @@
 
 
 
-## 1_Overview
+## Overview
 **SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format.**
 The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
 
-#### 1.1_Examples
+#### Examples
 The following figures list some classic examples in our dataset. You can click out [`examples: 1~4/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Examples/examples_1-4.png) and [`examples: 5~8/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Examples/examples_5-8.png) to view the details.
 
 #### 1.2_Detail_information
