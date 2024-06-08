@@ -49,7 +49,7 @@
   "description": "SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format. The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes.",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "license": "CC-BY 4.0",
-  "url": "https://github.com/ziyan-xiaoyu/SpatialMQA",
+  "url": " https://anonymous.4open.science/r/SpatialMQA",  // Anonymous link, will be modified to real name link after the paper is reviewed
   "version": "1.0.0",
   "distribution": [
     {
@@ -57,7 +57,7 @@
       "@id": "github-repository",
       "name": "github-repository",
       "description": "SpatialMQA repository on GitHub.",
-      "contentUrl": "https://github.com/ziyan-xiaoyu/SpatialMQA",
+      "contentUrl": " https://anonymous.4open.science/r/SpatialMQA",
       "encodingFormat": "git+https",
       "sha256": "main"
     },
