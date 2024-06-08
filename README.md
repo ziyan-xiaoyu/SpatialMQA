@@ -14,26 +14,37 @@
 </p>
 
 
-## 1 Overview
+## Contents
+
+- [ImgFact](#Contents)
+  - [Overview](#1_Overview)
+    - [Examples](#1.1_Examples)
+    - [Detail information](#1.2_Detail_information)
+  - [Access SpatialMQA](#2_Access_SpatialMQA)
+    - [Download images](#2.1_Download_images)
+    - [Splits of the data](#2.2_Splits_of_the_data)
+    - [Format of the data](#2.3_Format_of_the_data)
+  - [License](#License)
+
+
+
+
+## 1_Overview
 **SpatialMQA is a manually annotated dataset designed for multimodal spatial relation reasoning in a multiple-choice question & answer format.**
 The dataset includes 5,392 samples collected from COCO2017, covering 128 subject and object types, without bounding boxes. To address the limitations of existing datasets, we clearly define annotation guidelines for SpatialMQA, including standardizing the objective world as the coordinate system and avoiding questions that can be answered solely by the question itself. 
 
-#### 1.1 Examples
-The following figures list some classic examples in our dataset.
-<br>
-![](Examples/examples_1-4.png)
-![](Examples/examples_4-8.png)
+#### 1.1_Examples
+The following figures list some classic examples in our dataset. You can click out [`examples: 1~4/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Examples/examples_1-4.png) and [`examples: 5~8/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Examples/examples_5-8.png) to view the details.
 
-
-#### 1.2 Detail information
+#### 1.2_Detail_information
 The following table lists the detailed information statistics of the splited dataset.
 <br>
 ![](Comparison/splits.png)
 Check out [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset) for more details.
 
 
-## 2 Access SpatialMQA
-### 2.1 Download images
+## 2_Access_SpatialMQA
+### 2.1_Download_images
 We use a subset of COCO-2017's images. The following script download COCO-2017's test sets images then put them into a single fodler `Dataset/COCO2017/`.
 
 ```bash
@@ -51,11 +62,11 @@ python select_revlevant_images.py
 Alternatively, you could also browse individual images online directly using the key "image" in single json data.
 <br>(Through COCO's open source link, 'http://images.cocodataset.org/test2017/' + 'image_name'. For example: http://images.cocodataset.org/test2017/000000195921.jpg.)
 
-### 2.2 Splits of the data
+### 2.2_Splits_of_the_data
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
 <br>All the splited data sets are in the directory [`dataset/`](https://github.com/ziyan-xiaoyu/SpatialMQA/blob/Dataset). 
 
-### 2.3 Format of the data
+### 2.3_Format_of_the_data
 Each `jsonl` file is of the following format:
 ```json
 {"image": "000000000933.jpg", "question": "Where is the fork located relative to the pizza?", "options": ["on/above", "below", "in front of", "behind", "left of", "right of"], "answer": "right of"}
@@ -66,8 +77,6 @@ Each `jsonl` file is of the following format:
 Each line is an individual data point.
 `image` denotes name of the image in COCO. `question` is the question with manual annotation, `options` is reasonable combinations of six spatial relationships:(on/above, below, in front of, behind, left of, right of. `answer` is the annotation based on the objective world.
 
-
-## Citation
 
 
 ## License
