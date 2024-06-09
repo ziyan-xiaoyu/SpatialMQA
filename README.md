@@ -110,9 +110,8 @@ Due to the large amount of open source model code, you need to download it yours
 - For gemini-pro-v and gpt-4v, you can directly execute our Python file, provided that you prepare a key:
 ```
 python filter_tuples.py
-python gen_sample_tuples.py
-python gen_candidate_relations.py
-python gen_visual_relations.py
+python gpt4.py
+python gemini.py
 ```
 Gemini needs to apply on the [official website](https://aistudio.google.com/app/apikey), and GPT4 needs to be purchased on the [official website](https://openai.com/).
 
