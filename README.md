@@ -112,9 +112,6 @@ nohup python instructblip-flan-t5-xl.py > log/.log 2>1& &
 nohup python instructblip-lora.py > log/.log 2>1& &
 nohup python idefics_new.py > log/.log 2>1& &
 nohup python idefics_lora.py > log/.log 2>1& &
-```
-- For llava and mplug-owl, you need to execute bash files to perform inference on models before and after fine-tuning:
-```
 nohup python spatial_test_llava.py > log/.log 2>1& &
 nohup python spatial_test_llava_lora.py > log/.log 2>1& &
 nohup python spatial_test_mplug.py > log/.log 2>1& &
