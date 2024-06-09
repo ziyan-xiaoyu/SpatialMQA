@@ -119,10 +119,9 @@ Gemini needs to apply on the [official website](https://aistudio.google.com/app/
 ### Evaluation
 You can process the results of model inference through the code we provide to calculate overall accuracy, overall P, R, F1 indicators, accuracy based on relationship categories, and accuracy based on rules. We integrate the calculation process into the following Python files：
 ```
-python filter_tuples.py
-python gen_sample_tuples.py
-python gen_candidate_relations.py
-python gen_visual_relations.py
+python calculate_prf1.py
+python calculate_xyz.py
+python calculate_result_rule.py
 ```
 
 
