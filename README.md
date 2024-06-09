@@ -6,7 +6,7 @@
   <p align="center">  
 <!--     <a href="https://arxiv.org/abs/2205.00363">arxiv</a> -->
     ·
-    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Dataset">dataset</a>
+    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Dataset/dataset/train.jsonl">dataset</a>
     ·
     <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE">license</a>
 <!--     <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a> -->
@@ -43,7 +43,9 @@ The following figures list some classic examples in our dataset. You can click o
 ### Detail Information
 The following table [`Splits/`](Comparison/splits.png) lists the detailed information statistics of the splited dataset.
 <br>
-You can find our dataset through the following path **(Dataset/dataset)** for more details.
+You can find our dataset through the following path **_(Dataset/dataset)_** for more details.
+<br>
+_Due to the fact that only redirecting to the specified file is valid in anonymous links, redirecting to the specified directory is invalid. Therefore, we use bold and italicized font to indicate the markings of all specified directories, making it easier for reviewers to search. Thank you!_
 
 
 ## 2 Access SpatialMQA
@@ -67,7 +69,7 @@ Alternatively, you could also browse individual images online directly using the
 
 ###  Data Split
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
-<br>All the splited data sets are in the directory **(Dataset/dataset)**. 
+<br>All the splited data sets are in the directory **_(Dataset/dataset)_**. 
 
 ### Data Format
 Each `jsonl` file is of the following format:
@@ -85,9 +87,9 @@ Our dataset is expanded based on the categories included in the COCO dataset. Th
 
 ## 3 Experiment and Evaluation
 ### Experiment
-We have disclosed the inference code for the model in the directory **(Code/experiment)**,  as well as the fine-tuning code in the directory **(Code/finetune)**.
+We have disclosed the inference code for the model in the directory **_(Code/experiment)_**,  as well as the fine-tuning code in the directory **_(Code/finetune)_**.
 <br>
-- For all 6 open-sourse MLLMs, you can directly execute Python files in the directory **(Code/experiment)** to perform inference on models before and after fine-tuning: 
+- For all 6 open-sourse MLLMs, you can directly execute Python files in the directory **_(Code/experiment)_** to perform inference on models before and after fine-tuning: 
 ```
 nohup python blip-vqa-base.py > log/blip_exp.log 2>1& &
 nohup python blip-vqa-base_finetuned.py > log/blip_finetuned_exp.log 2>1& &
@@ -104,19 +106,19 @@ nohup python spatial_test_mplug_lora.py > log/mplug_lora_exp.log 2>1& &
 ```
 Due to the large amount of open source model code, you need to download it yourself through channels or call it directly from platforms such as [huggingface](https://huggingface.co).
 <br>
-- For blip, blip2, instructblip and idefics, you can directly execute Python files in the directory **(Code/finetune)** to perform fine-tuning: 
+- For blip, blip2, instructblip and idefics, you can directly execute Python files in the directory **_(Code/finetune)_** to perform fine-tuning: 
 ```
 nohup python blip-vqa-base.py > log/blip_train.log 2>1& &
 nohup python blip2-lora.py > log/blip2_train.log 2>1& &
 nohup python instructblip-lora.py > log/instructblip_train.log 2>1& &
 nohup python idefics.py > log/idefics_train.log 2>1& &
 ```
-- For llava and mplug-owl, you need to execute bash files in the directory **(Code/finetune)** to perform fine-tuning:
+- For llava and mplug-owl, you need to execute bash files in the directory **_(Code/finetune)_** to perform fine-tuning:
 ```
 nohup python llava_lora_train.sh > log/llava_train.log 2>1& &
 nohup python mPLUG_Owl_train_it.sh > log/mplug_train.log 2>1& &
 ```
-- For gemini-pro-v and gpt-4v, you can directly execute our Python file in the directory **(Code/close_models)** to perform inferencing of the zero-shot, few-shot and text-only, provided that you prepare a key:
+- For gemini-pro-v and gpt-4v, you can directly execute our Python file in the directory **_(Code/close_models)_** to perform inferencing of the zero-shot, few-shot and text-only, provided that you prepare a key:
 ```
 python gemini_text_only.py
 python gemini_zero_shot.py
@@ -132,7 +134,7 @@ python gpt4_3_shot.py
 Gemini needs to apply on the [official website](https://aistudio.google.com/app/apikey), and GPT4 needs to be purchased on the [official website](https://openai.com/).
 
 ### Evaluation
-You can process the results of model inference through the code we provide to calculate overall accuracy, overall P, R, F1 indicators, accuracy based on relationship categories, and accuracy based on rules. We integrate the calculation process into the Python files in the directory **(Code/eval)**:
+You can process the results of model inference through the code we provide to calculate overall accuracy, overall P, R, F1 indicators, accuracy based on relationship categories, and accuracy based on rules. We integrate the calculation process into the Python files in the directory **_(Code/eval)_**:
 ```
 python calculate_prf1.py
 python calculate_xyz.py
