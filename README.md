@@ -141,5 +141,8 @@ python calculate_xyz.py
 python calculate_result_rule.py
 ```
 
+### Requirements
+The environment configuration required for debugging code is placed in directory **_(Code/requirement)_**
+
 ## 4 License
 This project is licensed under the [Apache-2.0 License](LICENSE).
