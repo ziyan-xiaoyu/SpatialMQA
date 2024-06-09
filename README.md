@@ -111,7 +111,7 @@ nohup python blip2-lora.py > log/blip2_train.log 2>1& &
 nohup python instructblip-lora.py > log/instructblip_train.log 2>1& &
 nohup python idefics.py > log/idefics_train.log 2>1& &
 ```
-- For llava and mplug-owl, you need to execute bash files to perform fine-tuning:
+- For llava and mplug-owl, you need to execute bash files in the directory [`finetune/`](Code/finetune) to perform fine-tuning:
 ```
 nohup python llava_lora_train.sh > log/llava_train.log 2>1& &
 nohup python mPLUG_Owl_train_it.sh > log/mplug_train.log 2>1& &
