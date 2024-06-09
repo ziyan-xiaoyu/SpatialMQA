@@ -43,7 +43,7 @@ The following figures list some classic examples in our dataset. You can click o
 ### Detail Information
 The following table [`Splits/`](Comparison/splits.png) lists the detailed information statistics of the splited dataset.
 <br>
-Check out [`dataset/`](Dataset) for more details.
+Check out [`dataset/`](Dataset/) for more details.
 
 
 ## 2 Access SpatialMQA
