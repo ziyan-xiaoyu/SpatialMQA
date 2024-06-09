@@ -25,7 +25,7 @@
     - [Download Images](#Download-Images)
     - [Data Split](#Data-Split)
     - [Data Format](#Data-Format)
-  - [Experiment & Evaluation](#4-Experiment-&-Evaluation)
+  - [Experiment & Evaluation](#4-Experiment-and-Evaluation)
     - [Experiment](#Experiment)
     - [Evaluation](#Evaluation)
   - [License](#4-License)
@@ -83,7 +83,7 @@ Each line is an individual data point.
 Our dataset is expanded based on the categories included in the COCO dataset. There are 113 subject types and one additional type for subjects with five or fewer samples in our dataset, and 84 object types and one additional type for objects with five or fewer samples. Due to the overlap between subject and object types, we have a total of 128 distinct subject and object types. You can see all of them in the file [`S & O types/`](Dataset/types/types.txt). 
 
 
-## 3 Experiment & Evaluation
+## 3 Experiment and Evaluation
 ### Experiment
 We have disclosed the inference code for the model in the directory [`experiment/`](Code/experiment),  as well as the fine-tuning code in the directory [`finetune/`](Code/finetune).
 <br>
