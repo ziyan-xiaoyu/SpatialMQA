@@ -83,7 +83,22 @@ Each line is an individual data point.
 Our dataset is expanded based on the categories included in the COCO dataset. There are 113 subject types and one additional type for subjects with five or fewer samples in our dataset, and 84 object types and one additional type for objects with five or fewer samples. Due to the overlap between subject and object types, we have a total of 128 distinct subject and object types. You can see all of them in the file [`S & O types/`](Dataset/types/types.txt). 
 
 
-## 3 Experiment & Evaluation
+## 3 Fine-tune，Experiment & Evaluation
+### Fine-tune
+We have disclosed the inference and fine-tuning code for the model [`finetune/`](Code/finetune)
+<br>
+- For blip, blip2, instructblip and ideficts, you can directly execute Python files to start fine-tuning:
+```
+nohup python blip-vqa-base.py > log/.log 2>1& &
+nohup python blip2-lora.py > log/.log 2>1& &
+nohup python idefics.py > log/.log 2>1& &
+nohup instructblip-lora.py > log/.log 2>1& &
+```
+- For llava and mplug-owl, you need to execute bash files to start fine-tuning:
+```
+bash llava_lora_train.sh
+bash mPLUG_Owl_train_it.sh
+```
 ### Experiment
 We have disclosed the inference and fine-tuning code for the model [`experiment/`](Code/experiment), as well as the code required for evaluation [`eval/`](Code/eval).
 <br>
