@@ -121,7 +121,6 @@ Due to the large amount of open source model code, you need to download it yours
 <br>
 - For gemini-pro-v and gpt-4v, you can directly execute our Python file, provided that you prepare a key:
 ```
-python filter_tuples.py
 python gpt4.py
 python gemini.py
 ```
