@@ -115,8 +115,8 @@ nohup python idefics.py > log/idefics_train.log 2>1& &
 ```
 - For llava and mplug-owl, you need to execute bash files in the directory **_(Code/finetune)_** to perform fine-tuning:
 ```
-nohup python llava_lora_train.sh > log/llava_train.log 2>1& &
-nohup python mPLUG_Owl_train_it.sh > log/mplug_train.log 2>1& &
+nohup bash llava_lora_train.sh > log/llava_train.log 2>1& &
+nohup bash mPLUG_Owl_train_it.sh > log/mplug_train.log 2>1& &
 ```
 - For gemini-pro-v and gpt-4v, you can directly execute our Python file in the directory **_(Code/close_models)_** to perform inferencing of the zero-shot, few-shot and text-only, provided that you prepare a key:
 ```
