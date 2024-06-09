@@ -83,58 +83,61 @@ Each line is an individual data point.
 Our dataset is expanded based on the categories included in the COCO dataset. There are 113 subject types and one additional type for subjects with five or fewer samples in our dataset, and 84 object types and one additional type for objects with five or fewer samples. Due to the overlap between subject and object types, we have a total of 128 distinct subject and object types. You can see all of them in the file [`S & O types/`](Dataset/types/types.txt). 
 
 
-## 3 Fine-tune，Experiment & Evaluation
-### Fine-tune
-We have disclosed the inference and fine-tuning code for the model [`finetune/`](Code/finetune)
-<br>
-- For blip, blip2, instructblip and ideficts, you can directly execute Python files to start fine-tuning:
-```
-nohup python blip-vqa-base.py > log/.log 2>1& &
-nohup python blip2-lora.py > log/.log 2>1& &
-nohup python idefics.py > log/.log 2>1& &
-nohup instructblip-lora.py > log/.log 2>1& &
-```
-- For llava and mplug-owl, you need to execute bash files to start fine-tuning:
-```
-bash llava_lora_train.sh
-bash mPLUG_Owl_train_it.sh
-```
+## 3 Experiment & Evaluation
 ### Experiment
-We have disclosed the inference and fine-tuning code for the model [`experiment/`](Code/experiment), as well as the code required for evaluation [`eval/`](Code/eval).
+We have disclosed the inference code for the model in the directory [`experiment/`](Code/experiment),  as well as the fine-tuning code in the directory [`finetune/`](Code/finetune).
 <br>
-- For blip, blip2, instructblip and ideficts, you can directly execute Python files to perform inference on models before and after fine-tuning: 
+- For all 6 open-sourse MLLMs, you can directly execute Python files in the directory [`experiment/`](Code/experiment) to perform inference on models before and after fine-tuning: 
 ```
-nohup python blip-vqa-base.py > log/.log 2>1& &
-nohup python blip-vqa-base_finetuned.py > log/.log 2>1& &
-nohup python blip2-opt-2.7b.py > log/.log 2>1& &
-nohup python blip2-lora.py > log/.log 2>1& &
-nohup python instructblip-flan-t5-xl.py > log/.log 2>1& &
-nohup python instructblip-lora.py > log/.log 2>1& &
-nohup python idefics_new.py > log/.log 2>1& &
-nohup python idefics_lora.py > log/.log 2>1& &
-nohup python spatial_test_llava.py > log/.log 2>1& &
-nohup python spatial_test_llava_lora.py > log/.log 2>1& &
-nohup python spatial_test_mplug.py > log/.log 2>1& &
-nohup python spatial_test_mplug_lora.py > log/.log 2>1& &
+nohup python blip-vqa-base.py > log/blip_exp.log 2>1& &
+nohup python blip-vqa-base_finetuned.py > log/blip_finetuned_exp.log 2>1& &
+nohup python blip2-opt-2.7b.py > log/blip2_exp.log 2>1& &
+nohup python blip2-lora.py > log/blip2_lora_exp.log 2>1& &
+nohup python instructblip-flan-t5-xl.py > log/instructblip_exp.log 2>1& &
+nohup python instructblip-lora.py > log/instructblip_lora_exp.log 2>1& &
+nohup python idefics_new.py > log/idefics_exp.log 2>1& &
+nohup python idefics_lora.py > log/idefics_lora_exp.log 2>1& &
+nohup python spatial_test_llava.py > log/llava_exp.log 2>1& &
+nohup python spatial_test_llava_lora.py > log/llava_lora_exp.log 2>1& &
+nohup python spatial_test_mplug.py > log/mplug_exp.log 2>1& &
+nohup python spatial_test_mplug_lora.py > log/mplug_lora_exp.log 2>1& &
 ```
 Due to the large amount of open source model code, you need to download it yourself through channels or call it directly from platforms such as [huggingface](https://huggingface.co).
 <br>
-- For gemini-pro-v and gpt-4v, you can directly execute our Python file, provided that you prepare a key:
+- For blip, blip2, instructblip and idefics, you can directly execute Python files in the directory [`finetune/`](Code/finetune) to perform fine-tuning: 
 ```
-python gpt4.py
-python gemini.py
+nohup python blip-vqa-base.py > log/blip_train.log 2>1& &
+nohup python blip2-lora.py > log/blip2_train.log 2>1& &
+nohup python instructblip-lora.py > log/instructblip_train.log 2>1& &
+nohup python idefics.py > log/idefics_train.log 2>1& &
+```
+- For llava and mplug-owl, you need to execute bash files to perform fine-tuning:
+```
+nohup python llava_lora_train.sh > log/llava_train.log 2>1& &
+nohup python mPLUG_Owl_train_it.sh > log/mplug_train.log 2>1& &
+```
+- For gemini-pro-v and gpt-4v, you can directly execute our Python file in the directory [`close_source_models/`](Code/close_models) to perform inferencing of the zero-shot, few-shot and text-only, provided that you prepare a key:
+```
+python gemini_text_only.py
+python gemini_zero_shot.py
+python gemini_1_shot.py
+python gemini_2_shot.py
+python gemini_3_shot.py
+python gpt4_text_only.py
+python gpt4_zero_shot.py
+python gpt4_1_shot.py
+python gpt4_2_shot.py
+python gpt4_3_shot.py
 ```
 Gemini needs to apply on the [official website](https://aistudio.google.com/app/apikey), and GPT4 needs to be purchased on the [official website](https://openai.com/).
 
 ### Evaluation
-You can process the results of model inference through the code we provide to calculate overall accuracy, overall P, R, F1 indicators, accuracy based on relationship categories, and accuracy based on rules. We integrate the calculation process into the following Python files：
+You can process the results of model inference through the code we provide to calculate overall accuracy, overall P, R, F1 indicators, accuracy based on relationship categories, and accuracy based on rules. We integrate the calculation process into the Python files in the directory [`eval/`](Code/eval):
 ```
 python calculate_prf1.py
 python calculate_xyz.py
 python calculate_result_rule.py
 ```
-
-
 
 ## 4 License
 This project is licensed under the [Apache-2.0 License](LICENSE).
