@@ -17,7 +17,7 @@
 
 ## Contents
 
-- [ImgFact](#Contents)
+- [SpatialMQA](#Contents)
   - [Overview](#1-Overview)
     - [Examples](#Examples)
     - [Detail Information](#Detail-Information)
