@@ -143,6 +143,8 @@ python calculate_result_rule.py
 
 ### Requirements
 The environment configuration required for debugging code is placed in directory **_(Code/requirement)_**
+<br>
+The requirements of models blip, blip2 and instructblip, are all in the file [`requirement_blip.txt/`](Code/requirement/requirement_blip.txt)
 
 ## 4 License
 This project is licensed under the [Apache-2.0 License](LICENSE).
