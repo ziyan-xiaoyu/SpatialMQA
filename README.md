@@ -70,7 +70,7 @@ Alternatively, you could also browse individual images online directly using the
 ###  Data Split
 As reported in the folloeing table, SpatialMQA contains 5,392 samples, divided into training, validation, and test sets according to a 7:1:2 ratio.
 <br>All the splited data sets are in the directory **_(Dataset/dataset)_**. 
-<br>In addition, we have selected the part of the data set that contains invisible subjects or objects and placed it in the folder **_(Dataset/invisible)_** to facilitate readers' research.
+<br>In addition, we have selected the part of the data set that contains invisible subjects or objects and placed it in the file [`invisible/`](Dataset/invisible/invisible.jsonl) to facilitate readers' research.
 
 ### Data Format
 Each `jsonl` file is of the following format:
