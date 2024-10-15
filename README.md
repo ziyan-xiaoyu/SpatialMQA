@@ -90,7 +90,7 @@ Our dataset is expanded based on the categories included in the COCO dataset. Th
 ### Experiment
 We have disclosed the inference code for the model in the directory **_(Code/experiment)_**,  as well as the fine-tuning code in the directory **_(Code/finetune)_**.
 <br>
-- For all 6 open-sourse MLLMs, you can directly execute Python files in the directory **_(Code/experiment)_** to perform inference on models before and after fine-tuning: 
+- For all 7 open-sourse MLLMs, you can directly execute Python files in the directory **_(Code/experiment)_** to perform inference on models before and after fine-tuning: 
 ```
 nohup python blip-vqa-base.py > log/blip_exp.log 2>1& &
 nohup python blip-vqa-base_finetuned.py > log/blip_finetuned_exp.log 2>1& &
@@ -104,6 +104,8 @@ nohup python spatial_test_llava.py > log/llava_exp.log 2>1& &
 nohup python spatial_test_llava_lora.py > log/llava_lora_exp.log 2>1& &
 nohup python spatial_test_mplug.py > log/mplug_exp.log 2>1& &
 nohup python spatial_test_mplug_lora.py > log/mplug_lora_exp.log 2>1& &
+nohup python spacellava_test.py > log/spacellava_exp.log 2>1& &
+nohup python spacellava_lora_test.py > log/spacellava_lora_exp.log 2>1& &
 ```
 Due to the large amount of open source model code, you need to download it yourself through channels or call it directly from platforms such as [huggingface](https://huggingface.co).
 <br>
@@ -114,12 +116,13 @@ nohup python blip2-lora.py > log/blip2_train.log 2>1& &
 nohup python instructblip-lora.py > log/instructblip_train.log 2>1& &
 nohup python idefics.py > log/idefics_train.log 2>1& &
 ```
-- For llava and mplug-owl, you need to execute bash files in the directory **_(Code/finetune)_** to perform fine-tuning:
+- For llava, spacellava and mplug-owl, you need to execute bash files in the directory **_(Code/finetune)_** to perform fine-tuning:
 ```
 nohup bash llava_lora_train.sh > log/llava_train.log 2>1& &
+nohup bash spacellava_lora_train.sh > log/spacellava_train.log 2>1& &
 nohup bash mPLUG_Owl_train_it.sh > log/mplug_train.log 2>1& &
 ```
-- For gemini-pro-v and gpt-4v, you can directly execute our Python file in the directory **_(Code/close_models)_** to perform inferencing of the zero-shot, few-shot and text-only, provided that you prepare a key:
+- For gemini-1.5-flash and gpt-4o, you can directly execute our Python file in the directory **_(Code/close_models)_** to perform inferencing of the zero-shot, few-shot and text-only, provided that you prepare a key:
 ```
 python gemini_text_only.py
 python gemini_zero_shot.py
