@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <h1 align="center"> 🔭 Can Multimodal Large Language Models Understand Spatial Relations</h1>
-  <h3 align="center">SpatialMQA: A new dataset for spatial reasoning of MLLMs.</h3>
+  <h3 align="center">SpatialMQA: A new benchmark dataset for spatial reasoning of MLLMs.</h3>
   
   <p align="center">  
 <!--     <a href="https://arxiv.org/abs/2205.00363">arxiv</a> -->
