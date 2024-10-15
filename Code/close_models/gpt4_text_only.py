@@ -42,7 +42,7 @@ def encode_image(image):
 def call_gpt4(prompt: str, question: str, image):
     try:
         response = client.chat.completions.create(
-            model="gpt-4-vision-preview",
+            model="gpt-4o",
             messages=[
                 {
                     "role": "user",
