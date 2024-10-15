@@ -40,20 +40,20 @@ def encode_image(image):
         return None
 
 
-def call_gpt4(prompt: str, image):
+def call_gpt4(prompt: str, image, detail='auto'):
     try:
         response = client.chat.completions.create(
-            model="gpt-4-vision-preview",
+            model="gpt-4o",
             messages=[
                 {
                     "role": "user",
                     # zero-shot + few-shot
                     "content": [{"type": "text", "text": prompt}] \
-                               + [{"type": "image_url", "image_url": image}]
+                               + [{"type": "image_url", "image_url": { "url": image, "detail": detail}}]
                 }
             ],
             max_tokens=500,
-            temperature=0.3,
+            temperature=0.5,
         )
         # print(response.choices[0].message.content.strip())
         return response.choices[0].message.content.strip()
