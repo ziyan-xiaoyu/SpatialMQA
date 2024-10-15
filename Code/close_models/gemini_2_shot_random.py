@@ -5,8 +5,6 @@ from io import BytesIO
 import requests
 import random
 
-# AIzaSyBUyK-PvQk04QJnU815oR1yOc019mGK0GI # 1.5-1
-
 genai.configure(api_key="your key", transport="rest")
 
 generation_config = {"temperature": 0, "top_p": 1, "top_k": 1, "max_output_tokens": 480}
