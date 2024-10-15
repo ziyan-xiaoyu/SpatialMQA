@@ -30,10 +30,10 @@ def fetch_image_content(image_url):
 import PIL.Image as Image
 
 # few-shot & zero-shot:
-model = genai.GenerativeModel('gemini-pro-vision', generation_config=generation_config, safety_settings=safety_settings)
+model = genai.GenerativeModel('gemini-1.5-flash', generation_config=generation_config, safety_settings=safety_settings)
 
 # text-only:
-# model = genai.GenerativeModel('gemini-pro', generation_config=generation_config, safety_settings=safety_settings)
+# model = genai.GenerativeModel('gemini-1.5-flash', generation_config=generation_config, safety_settings=safety_settings)
 
 import json
 
