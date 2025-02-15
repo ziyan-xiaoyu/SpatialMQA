@@ -1,0 +1,8 @@
+# torch==2.2.1
+transformers==4.39.1
+modelscope==1.13.3
+# ms-swift==2.1.0.dev0
+# ms-swift==2.1.0
+ms-swift==2.0.0
+# python==3.8.18
+omegaconf==2.2.3
