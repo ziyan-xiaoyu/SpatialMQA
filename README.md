@@ -49,6 +49,8 @@ _Due to the fact that only redirecting to the specified file is valid in anonymo
 
 
 ## 2 Access SpatialMQA
+Our dataset has been officially released on the Hugging Face. It is available at https://huggingface.co/datasets/liuziyan/SpatialMQA.  
+Alternatively, you can download it from GitHub by following the steps below:  
 ### Download Images
 We use a subset of COCO-2017's images. The following script download COCO-2017's test sets images then put them into a single fodler `Dataset/COCO2017/`.
 
