@@ -6,7 +6,9 @@
   <p align="center">  
 <!--     <a href="https://arxiv.org/abs/2205.00363">arxiv</a> -->
     ·
-    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Dataset/dataset/train.jsonl">dataset</a>
+    <a href="https://huggingface.co/datasets/liuziyan/SpatialMQA">huggingface</a>
+    ·
+    <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/Dataset/dataset/train.jsonl">github</a>
     ·
     <a href="https://github.com/ziyan-xiaoyu/SpatialMQA/blob/master/LICENSE">license</a>
 <!--     <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a> -->
